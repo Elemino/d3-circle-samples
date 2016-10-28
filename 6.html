@@ -1,0 +1,35 @@
+<html>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+  <div>Click below:</div>
+  <svg width="1000" height="1000">
+    <g transform="translate(150,150)">
+    </g>
+  </svg>
+
+  <script>
+    function update(data) {
+      var g = d3.select('g')
+      var circles = g.selectAll('circle').data(data)
+
+      circles.enter().append('circle')
+        .style('fill', '#48a')
+        .attr('r', 5)
+      circles.exit().remove()
+
+      circles.attr('cx', function(d,i) { return i*40 })
+      circles.transition().attr('cy', function(d,i) { return d*20 })
+    }
+
+    d3.select('svg').on('click', function() {
+        var data = []
+        for (var i = 0; i < 15; ++i) {
+          data.push(Math.random() * 10)
+        }
+        update(data)
+    })
+
+  </script>
+
+</body>
