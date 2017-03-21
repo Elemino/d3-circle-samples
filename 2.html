@@ -1,0 +1,20 @@
+<html>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+  <svg width="1000" height="1000">
+    <g transform="translate(150,150)">
+      <circle cx="50" cy="0" r="60" style="fill: rgba(220,0,0,0.5)" />
+      <circle cx="0" cy="90" r="60" style="fill: rgba(220,220,0,0.5)" />
+      <circle cx="100" cy="90" r="60" style="fill: rgba(0,220,220,0.5)" />
+    </g>
+  </svg>
+
+
+  <script>
+    var circles = d3.selectAll('circle')
+    circles.style('fill', 'rgb(250, 100, 250)')
+    circles.attr('r', '30')
+  </script>
+
+</body>
