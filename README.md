@@ -1,2 +1,2 @@
-License: do what you want
+License: MIT
 # d3-circle-samples
