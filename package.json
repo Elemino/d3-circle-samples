@@ -8,5 +8,9 @@
   "main": "index.js",
   "repository": "https://github.com/Elemino/d3-circle-samples.git",
   "author": "Elemino <elemshalit@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/d3": "^5.7.0",
+    "d3": "^5.9.0"
+  }
 }
