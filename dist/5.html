@@ -1,0 +1,51 @@
+<html>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <div>Click below:</div>
+  <head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.b61e60ae.css" media="screen" title="no title" charset="utf-8">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="/main.fb6bbcaf.js"></script>
+  </head>
+  <body>
+
+
+  <div id="font">Click below:</div>
+
+  <svg width="1000" height="1000">
+    <g transform="translate(150,150)">
+    </g>
+  </svg>
+
+  <script>function update(data) {
+  var g = d3.select('g');
+  var circles = g.selectAll('circle').data(data);
+  circles.enter().append('circle').style('fill', '#48a').attr('r', 5);
+  circles.exit().remove();
+  circles.attr('cx', function (d, i) {
+    return i * 40;
+  });
+  circles.attr('cy', function (d, i) {
+    return d * 20;
+  });
+}
+
+d3.select('svg').on('click', function () {
+  var data = [];
+
+  for (var i = 0; i < Math.random() * 15; ++i) {
+    data.push(Math.random() * 10);
+  }
+
+  update(data);
+});</script>
+
+</body>
+</body></html>
