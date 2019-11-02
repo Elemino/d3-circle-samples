@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "parcel-bundler": "^1.11.0",
-    "sass": "^1.17.0"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.3"
   },
   "name": "d3-circle-samples",
   "version": "1.0.0",
@@ -10,7 +10,7 @@
   "author": "Elemino <elemshalit@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/d3": "^5.7.0",
-    "d3": "^5.9.0"
+    "@types/d3": "^5.7.2",
+    "d3": "^5.12.0"
   }
 }
